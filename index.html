@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📸 Photo Album Generator</h1>
+        <p>Creează și organizează amintirile tale!</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Creează un album</h2>
+            <form id="albumForm">
+                <input id="albumName" type="text"
+                    placeholder="Numele albumului" required>
+                <input id="albumDescription" type="text"
+                    placeholder="Descriere (opțional)">
+                <button type="submit">Creează album</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Adaugă fotografii</h2>
+            <label for="albumSelect">Alege albumul:</label>
+            <select id="albumSelect" required></select>
+
+            <label for="photoInput">Selectează fotografii:</label>
+            <input id="photoInput" type="file"
+                accept="image/*" multiple>
+
+            <button id="addPhotos" type="button">
+                Adaugă fotografii
+            </button>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Albumele mele</h2>
+            <div id="albumList" class="album-list"></div>
+
+            <div class="gallery-heading">
+                <h2>Galerie foto</h2>
+                <button id="showAll" type="button">Toate fotografiile</button>
+            </div>
+            <div id="gallery" class="gallery"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proiect individual — Generator de albume cu fotografii</p>
+        <p>Realizat cu HTML, CSS, JavaScript și GitHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
